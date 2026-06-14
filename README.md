@@ -2,9 +2,21 @@
 
 默认语言：中文 | [English](README.en.md)
 
-这是一个面向 HR 浏览的公开展示版项目。项目原型用于每天自动生成个性化经典电影推荐邮件：GitHub Actions 定时触发任务，Gmail API 读取观影反馈并发送邮件，DeepSeek API 负责偏好分析、电影选择和邮件文案生成。
+这是 [`Automated-email-push-of-highly-rated-movies-daily`](https://github.com/IrreplaceLee/Automated-email-push-of-highly-rated-movies-daily) 的公开版。项目用于每天自动生成个性化经典电影推荐邮件：GitHub Actions 定时触发任务，Gmail API 读取观影反馈并发送邮件，DeepSeek API 负责偏好分析、电影选择和邮件文案生成。
 
 公开版保留了核心实现、工作流、电影清单、剧照资源和演示截图；移除了真实运行历史、收件人记忆、OAuth 恢复说明、真实密钥和私有仓库提交历史。
+
+## 公开版与私有版区别
+
+| 对比项 | 私有版 `Automated-email-push-of-highly-rated-movies-daily` | 当前公开版 |
+|---|---|---|
+| 仓库可见性 | Private，用于真实运行 | Public，用于展示核心实现和运行方式 |
+| 运行状态 | 保留真实 `history.json` 与 `recipient_memory.json` | 只保留 `history.example.json` 与 `recipient_memory.example.json` |
+| 敏感配置 | 依赖 GitHub Secrets 和私有 OAuth 配置 | 只提供 `.env.example` 和占位变量 |
+| 邮件收件人 | 使用真实收件人配置 | README 示例只使用 `recipient@example.com` |
+| 工作流写权限 | 可按真实运行需要回写历史和记忆 | `contents: read`，不回写运行状态 |
+| Git 历史 | 保留私有开发历史 | 使用全新的公开提交历史 |
+| 剧照资源 | 保留项目使用素材 | 保留可公开展示素材，并记录来源说明 |
 
 ## 项目亮点
 

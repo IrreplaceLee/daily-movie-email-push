@@ -2,9 +2,21 @@
 
 Default language: [中文](README.md) | English
 
-This is a public showcase version prepared for HR review. The original prototype sends a personalized classic movie recommendation email every day: GitHub Actions triggers the workflow, Gmail API reads recent feedback and sends the message, and DeepSeek API handles preference analysis, movie selection, and email writing.
+This is the public version of [`Automated-email-push-of-highly-rated-movies-daily`](https://github.com/IrreplaceLee/Automated-email-push-of-highly-rated-movies-daily). The project sends a personalized classic movie recommendation email every day: GitHub Actions triggers the workflow, Gmail API reads recent feedback and sends the message, and DeepSeek API handles preference analysis, movie selection, and email writing.
 
 This public version keeps the core implementation, workflow, movie catalogue, still-image assets, and demo screenshots. It removes private runtime history, recipient memory, OAuth recovery notes, real secrets, and the original private Git history.
+
+## Differences from the Private Version
+
+| Area | Private `Automated-email-push-of-highly-rated-movies-daily` | This public version |
+|---|---|---|
+| Repository visibility | Private, used for real runs | Public, used to show the core implementation and workflow |
+| Runtime state | Keeps real `history.json` and `recipient_memory.json` | Keeps only `history.example.json` and `recipient_memory.example.json` |
+| Sensitive config | Uses GitHub Secrets and private OAuth setup | Provides only `.env.example` placeholders |
+| Recipients | Uses real recipient configuration | README examples use only `recipient@example.com` |
+| Workflow permissions | Can write history and memory for real operation | Uses `contents: read` and does not write runtime state |
+| Git history | Keeps private development history | Uses a new public commit history |
+| Still assets | Keeps project image assets | Keeps publicly presentable assets with source notes |
 
 ## Highlights
 
