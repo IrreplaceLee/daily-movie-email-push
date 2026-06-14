@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+
+history.json
+recipient_memory.json
+
+__pycache__/
+*.pyc
+*.log
+logs/
+output/
+tmp/
+temp/
+
+.DS_Store
+Thumbs.db

@@ -1,0 +1,152 @@
+[
+  {
+    "title": "公民凯恩",
+    "original_title": "Citizen Kane",
+    "region": "美国",
+    "year": 1941,
+    "director": "奥逊·威尔斯",
+    "cast": "奥逊·威尔斯 / 约瑟夫·科顿 / 多萝西·康明戈尔",
+    "douban_rating": "8.8",
+    "rating_source": "豆瓣电影",
+    "runtime": "119 分钟",
+    "summary": "报业大亨凯恩临终留下“玫瑰花蕾”一词，记者通过多位亲友的回忆拼合他辉煌又孤独的一生。",
+    "analysis": "影片把一个人的真相拆成多重叙述，权力、童年失落与情感匮乏互相照亮。它的景深调度和非线性结构至今仍是电影叙事的范本。",
+    "stills": [
+      {
+        "path": "assets/stills/citizen-kane-1.jpg"
+      },
+      {
+        "path": "assets/stills/citizen-kane-2.jpg"
+      },
+      {
+        "path": "assets/stills/citizen-kane-3.jpg"
+      }
+    ],
+    "comments": [
+      "常被视为现代电影语言的分水岭。",
+      "景深构图让权力关系直接进入画面。",
+      "“玫瑰花蕾”常被解读为失落童年的坐标。",
+      "人物越成功，私人世界越显空洞。"
+    ]
+  },
+  {
+    "title": "东京物语",
+    "original_title": "東京物語",
+    "region": "日本",
+    "year": 1953,
+    "director": "小津安二郎",
+    "cast": "笠智众 / 东山千荣子 / 原节子",
+    "douban_rating": "9.2",
+    "rating_source": "豆瓣电影",
+    "runtime": "136 分钟",
+    "summary": "年迈夫妇来到东京探望子女，却在忙碌与疏离中体会到家庭关系的变化。",
+    "analysis": "小津用极其克制的镜头记录亲情被现代生活慢慢稀释的过程。它不制造强烈冲突，却让日常细节承受巨大的情感重量。",
+    "stills": [
+      {
+        "path": "assets/stills/tokyo-story-1.jpg"
+      },
+      {
+        "path": "assets/stills/tokyo-story-2.jpg"
+      },
+      {
+        "path": "assets/stills/tokyo-story-3.jpg"
+      }
+    ],
+    "comments": [
+      "越平静，离别越难承受。",
+      "原节子的纪子被认为是温柔而复杂的道德中心。",
+      "影片不是谴责子女，而是凝视生活如何改变亲密。",
+      "固定机位让时间本身成为主角。"
+    ]
+  },
+  {
+    "title": "罗生门",
+    "original_title": "羅生門",
+    "region": "日本",
+    "year": 1950,
+    "director": "黑泽明",
+    "cast": "三船敏郎 / 京町子 / 志村乔",
+    "douban_rating": "8.8",
+    "rating_source": "豆瓣电影",
+    "runtime": "88 分钟",
+    "summary": "一桩命案被不同当事人讲述成多个版本，真相在记忆、欲望与自我辩护中变得模糊。",
+    "analysis": "影片不只是讲“真相不可知”，更揭示人如何用叙述保护自己的尊严。它让观众意识到影像也可能是主观证词。",
+    "stills": [
+      {
+        "path": "assets/stills/rashomon-1.jpg"
+      },
+      {
+        "path": "assets/stills/rashomon-2.jpg"
+      },
+      {
+        "path": "assets/stills/rashomon-3.jpg"
+      }
+    ],
+    "comments": [
+      "“罗生门效应”已成为文化概念。",
+      "多重叙事让真相问题变成道德问题。",
+      "森林光影极具表现力。",
+      "它打开了世界认识日本电影的重要入口。"
+    ]
+  },
+  {
+    "title": "十二怒汉",
+    "original_title": "12 Angry Men",
+    "region": "美国",
+    "year": 1957,
+    "director": "西德尼·吕美特",
+    "cast": "亨利·方达 / 李·科布 / 马丁·鲍尔萨姆",
+    "douban_rating": "9.4",
+    "rating_source": "豆瓣电影",
+    "runtime": "96 分钟",
+    "summary": "十二名陪审员在一间房中讨论少年杀人案，偏见、证据和合理怀疑逐渐浮出水面。",
+    "analysis": "影片几乎只靠对话和空间调度完成高度紧张的戏剧。它讨论司法制度，更讨论人在群体压力下是否仍能独立思考。",
+    "stills": [
+      {
+        "path": "assets/stills/12-angry-men-1.jpg"
+      },
+      {
+        "path": "assets/stills/12-angry-men-2.jpg"
+      },
+      {
+        "path": "assets/stills/12-angry-men-3.jpg"
+      }
+    ],
+    "comments": [
+      "密室戏剧的经典范本。",
+      "合理怀疑被拍得清楚而有力量。",
+      "人物偏见通过争论逐步暴露。",
+      "简单场景产生强烈戏剧张力。"
+    ]
+  },
+  {
+    "title": "城市之光",
+    "original_title": "City Lights",
+    "region": "美国",
+    "year": 1931,
+    "director": "查理·卓别林",
+    "cast": "查理·卓别林 / 弗吉尼亚·切瑞尔 / 佛罗伦斯·李",
+    "douban_rating": "9.3",
+    "rating_source": "豆瓣电影",
+    "runtime": "87 分钟",
+    "summary": "流浪汉爱上一位失明卖花女，努力筹钱帮助她治眼睛，同时制造一连串喜剧与心酸。",
+    "analysis": "卓别林把肢体喜剧和人道主义情感结合到极致。结尾的相认场面极其简洁，却能让全部情感回到一个眼神里。",
+    "stills": [
+      {
+        "path": "assets/stills/city-lights-1.jpg"
+      },
+      {
+        "path": "assets/stills/city-lights-2.jpg"
+      },
+      {
+        "path": "assets/stills/city-lights-3.jpg"
+      }
+    ],
+    "comments": [
+      "无声电影后期的杰作。",
+      "笑料和悲悯几乎不可分割。",
+      "结尾常被视为电影史最动人的段落之一。",
+      "流浪汉形象展现了底层尊严。"
+    ]
+  }
+]

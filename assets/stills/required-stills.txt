@@ -1,0 +1,15 @@
+assets/stills/citizen-kane-1.jpg
+assets/stills/citizen-kane-2.jpg
+assets/stills/citizen-kane-3.jpg
+assets/stills/tokyo-story-1.jpg
+assets/stills/tokyo-story-2.jpg
+assets/stills/tokyo-story-3.jpg
+assets/stills/rashomon-1.jpg
+assets/stills/rashomon-2.jpg
+assets/stills/rashomon-3.jpg
+assets/stills/12-angry-men-1.jpg
+assets/stills/12-angry-men-2.jpg
+assets/stills/12-angry-men-3.jpg
+assets/stills/city-lights-1.jpg
+assets/stills/city-lights-2.jpg
+assets/stills/city-lights-3.jpg
