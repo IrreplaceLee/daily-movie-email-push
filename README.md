@@ -1,40 +1,49 @@
-# Daily Movie Email Push
+# 每日高分经典电影邮件推送
 
-Public showcase version of a daily personalized classic movie recommendation email workflow. The private project runs on GitHub Actions, reads recipient feedback from Gmail, asks DeepSeek to generate a personalized recommendation, and sends one HTML email per recipient.
+默认语言：中文 | [English](README.en.md)
 
-This public repository is prepared for HR review. It keeps the core implementation, workflow, movie catalogue, and still-image assets, while removing private runtime history, recipient memory, OAuth recovery notes, and real secrets.
+这是一个面向 HR 浏览的公开展示版项目。项目原型用于每天自动生成个性化经典电影推荐邮件：GitHub Actions 定时触发任务，Gmail API 读取观影反馈并发送邮件，DeepSeek API 负责偏好分析、电影选择和邮件文案生成。
 
-## Highlights
+公开版保留了核心实现、工作流、电影清单、剧照资源和演示截图；移除了真实运行历史、收件人记忆、OAuth 恢复说明、真实密钥和私有仓库提交历史。
 
-- Scheduled automation with GitHub Actions.
-- Gmail API integration for sending personalized HTML emails.
-- DeepSeek API integration for preference analysis, movie selection, and email writing.
-- Per-recipient processing so each recipient receives an individual recommendation.
-- Local still-image library under `assets/stills/`, with source/license notes in `assets/stills/sources.json`.
-- Public-safe repository boundary: runtime history and memory are ignored and only example templates are committed.
+## 项目亮点
 
-## How it works
+- 自动化调度：使用 GitHub Actions 每日定时运行。
+- 邮件能力：通过 Gmail API 发送 HTML 个性化推荐邮件。
+- AI 应用：使用 DeepSeek API 完成观影偏好分析、影片选择和邮件撰写。
+- 个性化记忆：按收件人维护观影反馈、偏好和历史推荐，避免重复推荐。
+- 本地剧照资源：`assets/stills/` 保留可公开展示的剧照素材，来源说明记录在 `assets/stills/sources.json`。
+- 公开安全边界：真实 `history.json`、`recipient_memory.json` 和 `.env` 均不会提交，只保留 example 模板。
+
+## 演示截图
+
+| DeepSeek API 用量 | 邮箱收件箱列表 | 邮件详情页 |
+|---|---|---|
+| <img src="ppic/deepseek-usage-dashboard.png" alt="DeepSeek API 用量面板" width="300"> | <img src="ppic/mail-inbox-list.jpg" alt="每日电影推荐邮件收件箱列表" width="220"> | <img src="ppic/mail-detail-view.jpg" alt="电影推荐邮件详情页" width="220"> |
+
+## 工作流程
 
 ```text
-GitHub Actions schedule
+GitHub Actions 定时触发
   -> movie_mailer.py
-  -> Gmail access-token refresh
-  -> optional Gmail reply lookup
-  -> DeepSeek preference analysis and recommendation
-  -> HTML email composition
-  -> Gmail send API
-  -> local history/memory update
+  -> 刷新 Gmail access token
+  -> 查询最近 Gmail 回复
+  -> DeepSeek 分析偏好并生成推荐
+  -> 组装 HTML 邮件
+  -> Gmail Send API 发送
+  -> 本地更新历史和记忆文件
 ```
 
-The public workflow does not commit generated `history.json` or `recipient_memory.json` back to the repository. If you run it yourself, those files remain local runtime state and are ignored by Git.
+公开版 workflow 不会把运行生成的 `history.json` 或 `recipient_memory.json` commit 回仓库。如果你本地运行，这两个文件只作为本地运行状态存在，并已被 `.gitignore` 忽略。
 
-## Repository structure
+## 目录结构
 
 ```text
 .
 ├── .github/workflows/daily-movie-email.yml
 ├── assets/stills/
 ├── docs/architecture.md
+├── ppic/
 ├── tools/check_stills.py
 ├── movie_mailer.py
 ├── movies.json
@@ -44,9 +53,9 @@ The public workflow does not commit generated `history.json` or `recipient_memor
 └── SECURITY_CHECKLIST.md
 ```
 
-## Required GitHub Secrets
+## 必需的 GitHub Secrets
 
-Open `Settings` -> `Secrets and variables` -> `Actions`, then add:
+打开 `Settings` -> `Secrets and variables` -> `Actions`，添加：
 
 ```text
 GMAIL_CLIENT_ID=your_google_oauth_client_id
@@ -57,13 +66,13 @@ RECIPIENT_EMAIL=recipient@example.com;friend@example.com
 DEEPSEEK_API_KEY=your_deepseek_api_key
 ```
 
-Optional:
+可选：
 
 ```text
 DEEPSEEK_MODEL=deepseek-v4-pro
 ```
 
-## Local setup
+## 本地运行
 
 ```bash
 python -m venv .venv
@@ -71,31 +80,35 @@ pip install -r requirements.txt
 copy .env.example .env
 ```
 
-Fill `.env` with local test values, then export those variables before running `python movie_mailer.py`.
+填写 `.env` 后，在本地导出对应环境变量，再运行：
 
-## Still image assets
+```bash
+python movie_mailer.py
+```
 
-The public repository keeps the existing still-image assets so reviewers can inspect the resource organization. Source and license notes are tracked in `assets/stills/sources.json`; only keep images you have permission to store and redistribute. `movies.json` is filtered to movie entries whose referenced still files are complete in this public release.
+## 剧照资源
 
-Check still coverage with:
+公开仓库保留已有剧照资源，便于查看邮件内容组织方式。剧照来源和授权说明记录在 `assets/stills/sources.json`；只应保留有权存储和再分发的图片。
+
+检查剧照完整性：
 
 ```bash
 python tools/check_stills.py
 ```
 
-## Public release boundary
+## 公开边界
 
-Not included in this public repository:
+本公开仓库不包含：
 
-- real `history.json`
-- real `recipient_memory.json`
-- OAuth refresh-token recovery notes
-- real `.env` files
-- original private Git history
-- any real API key, OAuth token, Gmail message id, or recipient memory
+- 真实 `history.json`
+- 真实 `recipient_memory.json`
+- OAuth refresh token 恢复说明
+- 真实 `.env` 文件
+- 原私有仓库 Git 历史
+- 任何真实 API key、OAuth token、Gmail message id 或收件人记忆
 
-## Notes
+## 说明
 
-- The project uses model knowledge for recommendation writing and does not claim live movie-database verification.
-- Public workflow logs intentionally avoid printing raw recipient addresses or Gmail message ids.
-- If this repository is used for real sending, keep all secrets in GitHub Actions Secrets and do not commit runtime state.
+- 项目使用模型知识生成推荐文案，不声称实时联网核验电影数据库。
+- 公开 workflow 日志避免打印完整收件人邮箱和 Gmail message id。
+- 如果用于真实发送，请把所有密钥放在 GitHub Actions Secrets 中，不要提交运行状态文件。
